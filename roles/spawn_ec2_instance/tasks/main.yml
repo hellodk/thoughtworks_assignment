@@ -1,8 +1,8 @@
 ---
 
-- name: Creating webserver
+- name: Launching EC2 instance
   ec2:
-    key_name: "eu-weat1"
+    key_name: "sample_key_name"
     group: web
     instance_type: t1.micro
     image: ami-0c8c0c7f
@@ -27,7 +27,7 @@
 - local_action: ec2_elb
   args:
     instance_id: "{{ item.id }}"
-    ec2_elbs: sampleElb
+    ec2_elbs: "{{elb_name}}"
     state: present
     region: eu-west-1
     aws_access_key: "{{lookup('env', 'AWS_ACCESS_KEY_ID')}}"

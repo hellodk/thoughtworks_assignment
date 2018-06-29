@@ -2,7 +2,7 @@
 
 - name: create elb
   ec2_elb_lb:
-    name: sampleElb
+    name: "{{elb_name}}"
     state: present
     region: eu-west-1
     aws_access_key: "{{lookup('env', 'AWS_ACCESS_KEY_ID')}}"
