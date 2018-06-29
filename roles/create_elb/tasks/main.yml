@@ -14,10 +14,4 @@
       - protocol: http
         load_balancer_port: 80
         instance_port: 80
-      # - protocol: https
-      #   load_balancer_port: 443
-      #   instance_protocol: http
-      #   instance_port: 80
-        #ssl_certificate_id: 'arn:aws:iam::123456789:server-certificate/halberom'
   register: elb
-

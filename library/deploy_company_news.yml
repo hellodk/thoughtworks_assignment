@@ -1,6 +1,6 @@
 ---
 
-- hosts: company_news # this is the remote system ip, need to be replaced
+- hosts: company_news
   sudo: yes
   remote_user: "vagrant"
   roles:

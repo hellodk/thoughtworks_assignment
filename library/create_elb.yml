@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: company_news
   remote_user: "{{ user_name }}"
   sudo: yes
   vars_files:

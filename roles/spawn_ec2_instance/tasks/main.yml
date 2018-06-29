@@ -35,5 +35,5 @@
   with_items: instance_details.tagged_instances
 
 - name: 'configure elb dns'
-  route53: command=create zone=hellofaasos.com record=hellofaasos.com
+  route53: command=create zone=sample_zone.com record=sample_zone.com
            type=CNAME ttl=300 value="{{ elb.elb.dns_name }}"
